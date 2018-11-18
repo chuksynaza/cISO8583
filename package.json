@@ -1,0 +1,32 @@
+{
+  "name": "ciso8583",
+  "version": "0.1.0",
+  "description": "NodeJS ISO 8583 Parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuksynaza/cISO8583.git"
+  },
+  "keywords": [
+    "iso",
+    "iso8583",
+    "nodejs",
+    "javascript",
+    "financial",
+    "payments",
+    "eftpos",
+    "chuksy"
+  ],
+  "author": "Olisa Chukwunazaekpere Chuksy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chuksynaza/cISO8583/issues"
+  },
+  "homepage": "https://github.com/chuksynaza/cISO8583#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
