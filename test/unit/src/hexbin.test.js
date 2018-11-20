@@ -32,13 +32,13 @@ describe('HexBin', () => {
 
         it('should return the binary value of a hexadecimal string', () => {
 
-            assert.equal(HexBin.hex2Bin('FFA2', true), '1111111110100010');
+            assert.equal(HexBin.hex2Bin('FFA2'), '1111111110100010');
 
         });
 
         it('should return the binary value of a hexadecimal string', () => {
 
-            assert.equal(HexBin.hex2Bin('2', false), '0010');
+            assert.equal(HexBin.hex2Bin('2'), '0010');
 
         });
 
