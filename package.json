@@ -4,8 +4,10 @@
   "description": "NodeJS ISO 8583 Parser",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive --reporter spec",
-    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- --recursive -R spec test/*"
+    "test": "nyc mocha --recursive --reporter spec",
+    "cover": "nyc report --reporter=text-lcov | coveralls",
+    "testold": "mocha --recursive --reporter spec",
+    "coverold": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- --recursive -R spec test/*"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,7 @@
     "chai": "^4.2.0",
     "coveralls": "^3.0.2",
     "istanbul": "^0.4.5",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
   }
 }

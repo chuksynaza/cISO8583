@@ -11,7 +11,7 @@ describe('Bitmap', () => {
 
         it('should return false if it is a primary bitmap', () => {
 
-            expect(Bitmap.isSecondaryBitmap("35001180C0100000")).to.be.false;
+            expect(Bitmap.isSecondaryBitmap("2020000000800000")).to.be.false;
 
         });
 
@@ -39,7 +39,7 @@ describe('Bitmap', () => {
 
         it('should return a bitmap of length 64 for a primary bitmap', () => {
 
-            assert.equal(Bitmap.getFullBitmap("35001180C0100000").length, 64);
+            assert.equal(Bitmap.getFullBitmap("2020000000800000").length, 64);
 
         });
 
