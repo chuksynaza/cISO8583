@@ -1,14 +1,14 @@
 "use strict";
 
-const hexbin = require("./hexbin");
-
-let HexBin = new hexbin();
-
 class Bitmap {
+
+    constructor(HexBin){
+        this.HexBin = HexBin;
+    }
 
     isSecondaryBitmap(firstBitmapBit){
 
-        let firstBitmapBitBin = HexBin.hex2Bin(firstBitmapBit);
+        let firstBitmapBitBin = this.HexBin.hex2Bin(firstBitmapBit);
 
         if(firstBitmapBitBin[0] == "1"){
             return true;
@@ -40,7 +40,7 @@ class Bitmap {
 
         hexadecimalBitmap = bitmapPart.substring(0, hexadecimalBitmapLength);
 
-        binaryBitmap = HexBin.hex2Bin(hexadecimalBitmap);
+        binaryBitmap = this.HexBin.hex2Bin(hexadecimalBitmap);
 
         return binaryBitmap;
 

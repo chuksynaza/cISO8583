@@ -1,9 +1,13 @@
 const assert = require('assert');
 const expect = require('chai').expect;
 
+const hexbin = require("../../../src/hexbin");
+
+let HexBin = new hexbin();
+
 const bitmap = require("../../../src/bitmap");
 
-let Bitmap = new bitmap();
+let Bitmap = new bitmap(HexBin);
 
 describe('Bitmap', () => {
 
