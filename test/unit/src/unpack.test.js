@@ -134,7 +134,7 @@ describe('Unpack', () => {
 
         });
 
-        it('should set a data element to null if it is not present from the bitmap', () => {
+        it('should set a data element to null if it is not present in the bitmap', () => {
 
             let returnedDataElements = UnpackWithConfig.getDataElements();
 

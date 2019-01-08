@@ -26,6 +26,14 @@ class HexBin {
 
     }
 
+    bin2Hex(theBin){
+
+        let hexValue = parseInt(theBin, 2).toString(16).toUpperCase();
+
+        return hexValue;
+
+    }
+
 }
 
 module.exports = HexBin;

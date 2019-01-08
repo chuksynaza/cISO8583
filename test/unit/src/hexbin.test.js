@@ -44,6 +44,28 @@ describe('HexBin', () => {
 
     });
 
+    describe('bin2Hex', () => {
+
+        it('should return the hexadecimal value of a binary string', () => {
+
+            assert.equal(HexBin.bin2Hex('0010'), '2');
+
+        });
+
+        it('should return the hexadecimal value of a binary string of one character', () => {
+
+            assert.equal(HexBin.bin2Hex('1'), '1');
+
+        });
+
+        it('should return the hexadecimal value of a binary long string', () => {
+
+            assert.equal(HexBin.bin2Hex('1111111110100010'), 'FFA2');
+
+        });
+
+    });
+
 });
 
 

@@ -92,8 +92,6 @@ class Unpack {
 
         }
 
-        //console.log(this.dataElements);
-
         return this.dataElements;
 
     }
