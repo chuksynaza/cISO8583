@@ -2,7 +2,7 @@
   "name": "ciso8583",
   "version": "0.1.0",
   "description": "NodeJS ISO 8583 Parser",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "nyc mocha --recursive --reporter spec",
     "cover": "nyc report --reporter=text-lcov | coveralls",
