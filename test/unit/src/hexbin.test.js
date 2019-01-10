@@ -66,6 +66,16 @@ describe('HexBin', () => {
 
     });
 
+    describe('binaryCharactersToHex', () => {
+
+        it('should return the hexadecimal value of a binary string', () => {
+
+            assert.equal(HexBin.binaryCharactersToHex('11110010001111000100011011010001001010011110000010010010001000000000000000000000000000000000000000000000000000000000000000100001'), 'F23C46D129E092200000000000000021');
+
+        });
+
+    });
+
 });
 
 

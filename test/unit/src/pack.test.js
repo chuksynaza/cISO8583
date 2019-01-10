@@ -250,6 +250,17 @@ describe('Pack', () => {
 
     });
 
+    describe('setMTI', () => {
+
+        it('should set the MTI', () => {
+
+            const thePack = PackWithConfig.setMTI('0200');
+
+            assert.equal(PackWithConfig.MTI, '0200');
+
+        });
+    });
+
     describe('setElement', () => {
 
         it('should return an object', () => {

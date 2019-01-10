@@ -34,6 +34,23 @@ class HexBin {
 
     }
 
+    binaryCharactersToHex(theBinaryCharacters){
+
+        let theHexadecimal = '';
+
+        for (let i = 0; i < theBinaryCharacters.length; i = i + 4){
+
+            let theBinChars = theBinaryCharacters.substr(i, 4);
+            let theHex = this.bin2Hex(theBinChars);
+
+            theHexadecimal += theHex;
+
+        }
+
+        return theHexadecimal;
+
+    }
+
 }
 
 module.exports = HexBin;

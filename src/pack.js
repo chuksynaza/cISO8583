@@ -21,6 +21,13 @@ class Pack {
         this.binaryBitmap = '';
         this.dataElementPart = '';
         this.secondaryBitmapBit = '0';
+        this.MTI = '';
+
+    }
+
+    setMTI(mti){
+
+        this.MTI = mti;
 
     }
 
