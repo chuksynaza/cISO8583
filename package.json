@@ -1,6 +1,6 @@
 {
   "name": "ciso8583",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "NodeJS ISO 8583 Parser",
   "main": "main.js",
   "scripts": {
