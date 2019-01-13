@@ -8,7 +8,7 @@ This library provides an easy way to pack and unpack ISO8583 messages. It is ful
 ## Installation
 
 ```cmd
-npm install ciso8583
+$ npm install ciso8583
 ```
 
 ## Usage
@@ -220,7 +220,7 @@ console.log(unpacked);
 ```
 
 ### Optional Configuration
-This library allows easy customization of the data elements types, length and more. When optional configuration is specified, it overrides the default configuration of the element it was provided for. The optional configuration usually takes the format of the configuration of each data element.
+This library allows easy customization of the data elements types, length and more. When optional configuration is specified, it overrides the default configuration of the element it was provided for. The optional configuration usually takes the format of the configuration _(see configuration format and description section below)_ of each data element.
 
 Optional configuration is specified as shown below:
 
@@ -245,6 +245,57 @@ let iso8583ParserWithConfig = new cISO8583(optionalConfig);
 ```
 
 The __pack()__ and __unpack()__ methods would now use the configuration specified for the data element above
+
+
+## Configuration Format
+
+The configuration of the data elements is written in JSON. It is of the format
+
+```json
+{
+    "2": {
+        "fixedLength": false,
+        "contentLength": 2,
+        "minLength": 0,
+        "maxLength": 19,
+        "contentType": "n",
+        "slug": null,
+        "nestedElements": {}
+    },
+    "3": {
+        "fixedLength": true,
+        "contentLength": 6,
+        "minLength": 0,
+        "maxLength": 0,
+        "contentType": "n",
+        "slug": null,
+        "nestedElements": {}
+    }
+}
+```
+
+### Configuration Description
+
+From the format explained above these are the description of the various fields found in the configuration
+
+1. __fixedLength__ (boolean): Denotes if the length of the element is fixed or not
+2. __contentLength__ (integer): For fixed length types this tells us the length of the element. Otherwise the number of length characters present in the data. This means:
+  Fixed Length Types: the length would be the value.
+  Variable Length Types: The number of L's would be the value here, so for LLLVAR this would be 3 and for LLVAR this would be 2
+3. __minLength__ (integer): Denotes the minimum length for variable length types
+4. __maxLength__ (integer): Denotes the maximum length for variable length types
+5. __contentType__ (string): Denotes the content type of the field, the possible values and their description are below
+  n: Numeric values only
+  an: Alpha numeric
+  ans: Alpha numeric and special characters
+  x+n: Numeric (amount) values, where the first byte is either 'C' to indicate a positive or Credit value, or 'D' to indicate a negative or Debit value, followed by the numeric value (using n digits)
+  s: Special characters only
+  as: Alpha and special characters
+  ns: Numeric and special characters
+  b: Binary data
+  z: Tracks 2 and 3 code set as defined in ISO/IEC 7813 and ISO/IEC 4909 respectively
+6. __slug__ (string): Optional name for element _TODO: add slug feature_
+7. __nestedElements__ (object): Nested elements inside data element _TODO: add nested element feature_
 
 ## Contributors
 
