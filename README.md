@@ -117,7 +117,7 @@ console.log(packed);
   "hexadecimalBitmap": "4200040000000002",
   "secondaryBitmap": false,
   "dataElementPart": "1612345678901234560609173030123109789ABC1000123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789",
-  "mti": "",
+  "mti": "0200",
   "isoMessage": "020042000400000000021612345678901234560609173030123109789ABC1000123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"
 }
 ```
@@ -285,15 +285,15 @@ From the format explained above these are the description of the various fields 
 3. __minLength__ (integer): Denotes the minimum length for variable length types
 4. __maxLength__ (integer): Denotes the maximum length for variable length types
 5. __contentType__ (string): Denotes the content type of the field, the possible values and their description are below
-  n: Numeric values only
-  an: Alpha numeric
-  ans: Alpha numeric and special characters
+  * n: Numeric values only
+  * an: Alpha numeric
+  * ans: Alpha numeric and special characters
   x+n: Numeric (amount) values, where the first byte is either 'C' to indicate a positive or Credit value, or 'D' to indicate a negative or Debit value, followed by the numeric value (using n digits)
-  s: Special characters only
-  as: Alpha and special characters
-  ns: Numeric and special characters
-  b: Binary data
-  z: Tracks 2 and 3 code set as defined in ISO/IEC 7813 and ISO/IEC 4909 respectively
+  * s: Special characters only
+  * as: Alpha and special characters
+  * ns: Numeric and special characters
+  * b: Binary data
+  * z: Tracks 2 and 3 code set as defined in ISO/IEC 7813 and ISO/IEC 4909 respectively
 6. __slug__ (string): Optional name for element _TODO: add slug feature_
 7. __nestedElements__ (object): Nested elements inside data element _TODO: add nested element feature_
 
