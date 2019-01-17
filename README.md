@@ -1,4 +1,5 @@
-# cISO8583 [![Build Status](https://travis-ci.org/chuksynaza/cISO8583.svg?branch=master)](https://travis-ci.org/chuksynaza/cISO8583) [![Coverage Status](https://coveralls.io/repos/github/chuksynaza/cISO8583/badge.svg?branch=master)](https://coveralls.io/github/chuksynaza/cISO8583?branch=master)
+# cISO8583 [![Build Status](https://travis-ci.org/chuksynaza/cISO8583.svg?branch=master)](https://travis-ci.org/chuksynaza/cISO8583) [![Coverage Status](https://coveralls.io/repos/github/chuksynaza/cISO8583/badge.svg?branch=master)](https://coveralls.io/github/chuksynaza/cISO8583?branch=master) [![Build Status](https://img.shields.io/npm/dm/ciso8583.svg)](https://img.shields.io/npm/dm/ciso8583.svg)
+
 ISO8583 Parser for NodeJS
 
 ## Introduction
