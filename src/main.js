@@ -65,6 +65,8 @@ class Main {
 
         let MTILength = 4;
 
+        let theMTI = message.substr(0, 4);
+
         let Bitmap = new bitmap(HexBin);
 
         let fullBitmap = Bitmap.getFullBitmap(message, true);
@@ -82,6 +84,7 @@ class Main {
         response.binaryBitmap = fullBitmap;
         response.secondaryBitmap = secondaryBitmap;
         response.dataElements = dataElements;
+        response.mti = theMTI;
 
         return response;
 
